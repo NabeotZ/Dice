@@ -10,3 +10,10 @@ else:
     print("Closing game, come back soon. ")
     quit()
 
+#Roll the dice
+def roll():
+    first_dice = random.randint(1, 6)
+    second_dice = random.randint(1, 6)
+    third_dice = random.randint(1, 6)
+    return [first_dice, second_dice, third_dice]
+
