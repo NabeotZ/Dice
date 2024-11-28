@@ -62,3 +62,20 @@ else:
         elif different_dice[0] == "Dice are different":  
             #Tell the user
             print("Every dice has rolled differently.")
+
+ #Ask if a reroll is wanted
+            reroll = input("Reroll dice? (Roll/Stop) ")
+            if reroll.lower() == "Roll":
+            #Reroll the dice
+                roll_list = roll()  
+                #Get the results again
+                total = sum(roll_list)  
+                #Show the reroll results
+                print("New roll results:", roll_list)
+                #Move forward
+                continue  
+            #If a reroll was not requested
+            else:
+                print("Reroll not requested, final rolls:", roll_list)
+                print(f"Final total is {total}.")
+                break
