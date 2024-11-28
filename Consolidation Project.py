@@ -36,4 +36,17 @@ def different_results(list_of_dice_rolls):
     else:  
         return "Dice are different", list_of_dice_rolls
 
+#Get the results after rolling
+roll_list = roll()
+print("Roll 1:", roll_list)
+total = sum(roll_list)
+
+
+#Check if all the dice have the same result
+if different_results(roll_list) == 0:
+    print("Zero Points")
+else:
+    while True:
+        print(f"Roll one is {roll_list[0]}, roll two is {roll_list[1]}, roll three is {roll_list[2]}.")
+        print(f"Total is {total}.")
 
