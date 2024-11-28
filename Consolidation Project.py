@@ -81,3 +81,18 @@ else:
                 print(f"Final total is {total}.")
                 #End the game if user does not want a reroll
                 break
+
+#If one dice result is different
+        else:  
+        #Show the dice that is diferent and reroll it
+            print(f"The die that rolled {different_dice[0]} is different from the other two dice.")
+            go_again = input("Reroll die that had different result? (Yes/No) ")
+            if go_again.lower() == "Yes":
+                roll_list[different_dice[1]] = random.randint(1, 6)
+                total = sum(roll_list)  
+                print("After reroll:", roll_list)
+            else:
+            #If a reroll is not requested show the fial result
+                print("No reroll requested. Final rolls:", roll_list)
+                print(f"Final total is {total}.")
+                break
