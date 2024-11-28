@@ -50,13 +50,15 @@ else:
         print(f"Roll one is {roll_list[0]}, roll two is {roll_list[1]}, roll three is {roll_list[2]}.")
         print(f"Total is {total}.")
 
-#Find the dice that was different
+#Find if there was dice that rolled different from the others
         different_dice = different_results(roll_list)
-        # If all dice are the same
+        # If all the dice have the same result
         if different_dice == 0:
-            #Give zero points
+            #Give zero points and tell the user
             print("All dice rolled the same. Tupled out, Zero points")
+            #End the game
             break
-        #If all dice are different
+        #If all the dice have different results
         elif different_dice[0] == "Dice are different":  
+            #Tell the user
             print("Every dice has rolled differently.")
