@@ -66,13 +66,13 @@ else:
  #Ask if the user wants a reroll
             reroll = input("Reroll dice? (Roll/Stop) ")
             if reroll.lower() == "Roll":
-            #Reroll the dice
+            #Reroll the dice if user requests it
                 roll_list = roll()  
-                #Get the results again
+                #Get the results of the reroll
                 total = sum(roll_list)  
-                #Show the reroll results
+                #Show the results of the reroll
                 print("New roll results:", roll_list)
-                #Move forward
+                #Continue the game
                 continue  
             #If user does not want a reroll
             else:
