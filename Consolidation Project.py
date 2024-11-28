@@ -36,11 +36,11 @@ def different_results(list_of_dice_rolls):
     else:  
         return "Dice are different", list_of_dice_rolls
 
-#Get the results after rolling
+#Get the results of the rolls
 roll_list = roll()
+#Show the first roll of the dice is occuring
 print("Roll 1:", roll_list)
 total = sum(roll_list)
-
 
 #Check if all the dice have the same result
 if different_results(roll_list) == 0:
