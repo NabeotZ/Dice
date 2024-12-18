@@ -6,6 +6,8 @@ roll_dice = input("Welcome to rolling dice; to start the game press Y. ")
 if roll_dice == "Y":
     #Show this if they want to play
     print("Beginning Dice Rolls now. ")
+    #Tell the game start time
+    print("Game start time:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
 else:
     #Quit the program if they do not want to play
     print("Closing game, come back soon. ")
@@ -42,6 +44,9 @@ roll_list = roll()
 #Show the first roll of the dice is occuring
 print("Roll 1:", roll_list)
 total = sum(roll_list)
+
+#Calculate the total with numpy
+total = np.sum(roll_list)
 
 #Check if all the dice have the same result
 if different_results(roll_list) == 0:
