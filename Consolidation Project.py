@@ -1,5 +1,6 @@
 import random
-
+import time
+import numpy as np
 #Does the user want to play
 roll_dice = input("Welcome to rolling dice; to start the game press Y. ")
 if roll_dice == "Y":
