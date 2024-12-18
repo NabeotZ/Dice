@@ -77,7 +77,7 @@ else:
             #Reroll the dice if user requests it
                 roll_list = roll()  
                 #Get the results of the reroll
-                total = sum(roll_list)  
+                total = np.sum(roll_list)  
                 #Show the results of the reroll
                 print("New roll results:", roll_list)
                 #Continue the game
@@ -87,6 +87,8 @@ else:
                 print("Reroll not requested, final rolls:", roll_list)
                 #Show the final total to the user
                 print(f"Final total is {total}.")
+                #Show game end time
+                print("Game end time:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
                 #End the game if user does not want a reroll
                 break
 
@@ -98,12 +100,14 @@ else:
             if go_again.lower() == "Yes":
                 #Reroll the different die
                 roll_list[different_dice[1]] = random.randint(1, 6)
-                total = sum(roll_list)  
+                total = np.sum(roll_list)  
                 #Get the new total
-                print("After reroll:", roll_list)
+                print("After the reroll:", roll_list)
             else:
             #If a reroll is not requested show the final result
                 print("No reroll requested. Final rolls:", roll_list)
                 print(f"Final total is {total}.")
+                #Show game end time
+                print("Game end time:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
                 #Stop the game
                 break
