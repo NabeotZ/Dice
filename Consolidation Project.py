@@ -55,6 +55,8 @@ else:
     while True:
         print(f"Roll one is {roll_list[0]}, roll two is {roll_list[1]}, roll three is {roll_list[2]}.")
         print(f"Total is {total}.")
+        #Show the time
+        print("Time is:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
 
 #Find if there was dice that rolled different from the others
         different_dice = different_results(roll_list)
